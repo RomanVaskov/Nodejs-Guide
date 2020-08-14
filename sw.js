@@ -119,6 +119,6 @@ self.addEventListener('fetch', ev => {
                 return res
             })
             .catch(() => caches.match(ev.request)
-                .then(res => res)
+                .then(res => res))
     )
 })
