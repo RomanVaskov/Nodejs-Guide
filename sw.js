@@ -1,4 +1,4 @@
-const NAME = 'ng-v1'
+const NAME = 'nodejs-guide-v1'
 
 const FILES = [
     './index.html',
