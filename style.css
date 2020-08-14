@@ -28,7 +28,7 @@ body {
 ul:not(.browser-default)>li {
     margin-left: 1.25em;
     padding: .25em;
-    list-style-type: circle;
+    list-style: circle;
     text-align: justify;
     font-size: 1.1em;
 }
@@ -52,7 +52,6 @@ nav {
 main {
     margin: 0 !important;
 }
-
 
 header,
 footer {
@@ -105,26 +104,26 @@ i {
 
 @media (max-width: 660px) {
     nav .brand-logo.right {
-        font-size: 1.6em;
+        font-size: 1.4em;
     }
 
-    .sidenav li>a {
-        font-size: .8em;
+    ul:not(.browser-default)>li {
+        font-size: .95em;
     }
 
     h3 {
-        font-size: 1.7em;
+        font-size: 1.4em;
     }
 
     h5 {
-        font-size: 1.5em;
-    }
-
-    h6 {
         font-size: 1.2em;
     }
 
+    h6 {
+        font-size: 1.1em;
+    }
+
     p {
-        font-size: 1em;
+        font-size: .95em;
     }
 }
