@@ -111,14 +111,12 @@ self.addEventListener('fetch', ev => {
     ev.respondWith(
         fetch(ev.request)
             .then(res => {
-                let cacheClone = res.clone()
+                const cacheClone = res.clone()
                 caches.open(NAME).then(cache => {
                     cache.put(ev.request, cacheClone)
-                        .catch(er => er)
                 })
                 return res
             })
-            .catch(() => caches.match(ev.request)
-                .then(res => res))
+            .catch(() => caches.match(ev.request).then(res => res))
     )
 })
