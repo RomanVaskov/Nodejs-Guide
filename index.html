@@ -237,6 +237,7 @@
                     <i class="material-icons right">navigate_next</i>
                 </button>
             </div>
+            <p><a href="https://nodejs.dev/learn">Оригинальное руководство на английском языке.</a></p>
             <p>&copy; 2020. Игорь Агапов</p>
         </footer>
     </div>
@@ -261,19 +262,35 @@
 
         showPage(i)
 
+        const changePage = e => {
+            if (e === '-') {
+                if (i === 1) return;
+                else i--
+            } else {
+                if (i === C.querySelectorAll('.link').length) return;
+                else i++
+            }
+
+            showPage(i)
+        }
+
         C.addEventListener('click', ev => {
             if (ev.target.className === 'link') {
                 i = +ev.target.dataset.url
                 document.querySelector('.sidenav-overlay').click()
             } else if (ev.target.classList.contains('left')) {
-                if (i === 1) return;
-                else i--
+                changePage('-')
             } else if (ev.target.classList.contains('right')) {
-                if (i === C.querySelectorAll('.link').length) return;
-                else i++
+                changePage('+')
             } else return
+        })
 
-            showPage(i)
+        document.addEventListener('keydown', e => {
+            if (e.keyCode === 37 || e.keyCode === 65 || e.keyCode === 100) {
+                changePage('-')
+            } else if (e.keyCode == 39 || e.keyCode === 68 || e.keyCode === 102) {
+                changePage('+')
+            } else return
         })
 
         navigator.serviceWorker
