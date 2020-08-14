@@ -118,6 +118,7 @@ self.addEventListener('fetch', ev => {
                 })
                 return res
             })
-            .catch(() => caches.match('./404.html'))
+            .catch(() => caches.match(ev.request)
+                .then(res => res)
     )
 })
