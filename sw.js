@@ -2,6 +2,7 @@ const NAME = 'nodejs-guide-v1'
 
 const FILES = [
     './index.html',
+    './404.html',
     './style.css',
     './script.js',
     './server.js',
@@ -9,6 +10,7 @@ const FILES = [
     './icons/128.png',
     './icons/256.png',
     './icons/512.png',
+    './img/noise.webp',
     './img/9-1.png',
     './img/9-2.png',
     './img/16-1.png',
