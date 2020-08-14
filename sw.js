@@ -4,7 +4,6 @@ const FILES = [
     './index.html',
     './404.html',
     './style.css',
-    './script.js',
     './server.js',
     './icons/64.png',
     './icons/128.png',
@@ -111,9 +110,10 @@ self.addEventListener('fetch', ev => {
     ev.respondWith(
         fetch(ev.request)
             .then(res => {
-                const cacheClone = res.clone()
+                let cacheClone = res.clone()
                 caches.open(NAME).then(cache => {
                     cache.put(ev.request, cacheClone)
+                        .catch(er => er)
                 })
                 return res
             })
