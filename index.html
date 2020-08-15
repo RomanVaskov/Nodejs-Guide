@@ -41,7 +41,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);*{font-family:Montserrat,sans-serif}@media only screen and (min-width:993px){nav a.sidenav-trigger{display:block}}body{max-width:1280px;margin:0 auto}.sidenav li>a{padding:.5em;margin-right:1.25em;height:auto;font-size:.9em;font-weight:700;line-height:normal;text-align:left}ul:not(.browser-default)>li{margin-left:1.25em;padding:.25em;list-style:circle;text-align:justify;font-size:1.1em}nav .brand-logo.right{right:1em}.row{margin-bottom:0}.container{position:relative}nav{margin-bottom:1em}main{margin:0!important}footer,header{text-align:center}h3{font-size:2em;margin:.5em 0}p{text-align:justify;font-size:1.05em}footer p{font-size:.95em;text-align:center}span{padding:0 4px 2px;background:#eee;border-radius:2px}code{white-space:pre-wrap;display:block;padding:0 1em 1em;margin-top:1em;background:#eee;border-radius:4px;font-size:.95em}img{width:100%}.btn{margin:.25em;float:none!important}i{margin:0!important}@media (max-width:660px){nav .brand-logo.right{font-size:1.4em}ul:not(.browser-default)>li{font-size:.95em}h3{font-size:1.4em}h5{font-size:1.2em}h6{font-size:1.1em}p{font-size:.95em}}
+    </style>
 </head>
 
 <body>
@@ -238,64 +240,13 @@
                 </button>
             </div>
             <p><a href="https://nodejs.dev/learn">Оригинальное руководство на английском языке.</a></p>
+            <p><a href="https://nodejs.dev/learn">JavaScript: практика.</a></p>
             <p>&copy; 2020. Игорь Агапов</p>
         </footer>
     </div>
 
     <script>
-        const menu = document.querySelector('.sidenav-trigger')
-        menu.addEventListener('click', () => {
-            const elem = document.querySelector('.sidenav')
-            const instance = M.Sidenav.init(elem)
-        })
-
-        const C = document.querySelector('.container')
-        let i = +localStorage.getItem('NodejsGuidePageNumber') || 1
-
-        const showPage = i => {
-            const url = `./chapters/${i}.js`
-            import(url)
-                .then(data => C.querySelector('main').innerHTML = data.default)
-            localStorage.setItem('NodejsGuidePageNumber', i)
-            scrollTo(0, 0)
-        }
-
-        showPage(i)
-
-        const changePage = e => {
-            if (e === '-') {
-                if (i === 1) return;
-                else i--
-            } else {
-                if (i === C.querySelectorAll('.link').length) return;
-                else i++
-            }
-
-            showPage(i)
-        }
-
-        C.addEventListener('click', ev => {
-            if (ev.target.className === 'link') {
-                i = +ev.target.dataset.url
-                document.querySelector('.sidenav-overlay').click()
-            } else if (ev.target.classList.contains('left')) {
-                changePage('-')
-            } else if (ev.target.classList.contains('right')) {
-                changePage('+')
-            } else return
-        })
-
-        document.addEventListener('keydown', e => {
-            if (e.keyCode === 37 || e.keyCode === 65 || e.keyCode === 100) {
-                changePage('-')
-            } else if (e.keyCode == 39 || e.keyCode === 68 || e.keyCode === 102) {
-                changePage('+')
-            } else return
-        })
-
-        navigator.serviceWorker
-            .register('./sw.js')
-            .catch(e => console.error(e))
+        const menu=document.querySelector(".sidenav-trigger");menu.addEventListener("click",()=>{const el=document.querySelector(".sidenav"),instance=M.Sidenav.init(el)});const C=document.querySelector(".container");let i=+localStorage.getItem("NodejsGuidePageNumber")||1;const showPage=i=>{const url=`./chapters/${i}.js`;import(url).then(data=>C.querySelector("main").innerHTML=data.default),localStorage.setItem("NodejsGuidePageNumber",i),scrollTo(0,0)};showPage(i);const changePage=e=>{if("-"===e){if(1===i)return;i--}else{if(i===C.querySelectorAll(".link").length)return;i++}showPage(i)};C.addEventListener("click",ev=>{if("link"===ev.target.className)i=+ev.target.dataset.url,showPage(i),document.querySelector(".sidenav-overlay").click();else if(ev.target.classList.contains("left"))changePage("-");else{if(!ev.target.classList.contains("right"))return;changePage("+")}}),document.addEventListener("keydown",e=>{if(37===e.keyCode||65===e.keyCode||100===e.keyCode)changePage("-");else{if(39!=e.keyCode&&68!==e.keyCode&&102!==e.keyCode)return;changePage("+")}}),navigator.serviceWorker.register("./sw.js").catch(e=>console.error(e));
     </script>
 </body>
 
