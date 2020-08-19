@@ -1,3 +1,5 @@
+import {hljs} from './hl.js'
+
 const B = document.body
 const menuBtn = B.querySelector('.menu')
 const nav = B.querySelector('nav')
@@ -18,14 +20,18 @@ darken.addEventListener('click', () => {
 
 let i = +localStorage.getItem("NodejsGuidePageNumber") || 1
 
-const showPage = i => {
+const showPage = async i => {
     const url = `./chapters/${i}.js`
 
-    import(url).then(data => main.innerHTML = data.default)
+    await import(url).then(data => main.innerHTML = data.default)
 
     localStorage.setItem("NodejsGuidePageNumber", i)
 
     scrollTo(0, 0)
+
+    main.querySelectorAll('code').forEach(i => i.className = 'lang-js')
+
+    hljs(window)
 }
 
 showPage(i)
