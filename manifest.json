@@ -5,7 +5,7 @@
     "display": "standalone",
     "orientation": "portrait",
     "background_color": "#eee",
-    "theme_color": "#111",
+    "theme_color": "#222",
     "description": "Краткое руководство по Node.js для начинающих",
     "categories": "education",
     "icons": [{

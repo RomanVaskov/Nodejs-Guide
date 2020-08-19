@@ -1,0 +1,232 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1024px;
+    margin: 0 auto;
+    color: #222;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 300px;
+    max-height: 100vh;
+    overflow: scroll;
+    background: #fff;
+    padding: 1em;
+    scrollbar-width: none;
+    z-index: 2;
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.show {
+    animation: show .2s linear forwards;
+}
+
+.hide {
+    animation: hide .2s linear forwards;
+}
+
+@keyframes show {
+    from {
+        left: -320px;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes hide {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: -320px;
+    }
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    margin: .5em 0;
+    padding: .5em;
+    cursor: pointer;
+}
+
+nav li:hover {
+    background: #eee;
+    border-radius: 4px;
+}
+
+nav li:hover a {
+    color: #43853d;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    font-size: .95em;
+    transition: .2s;
+}
+
+.darken {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    z-index: 1;
+    display: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.menu {
+    width: 28px;
+    height: 28px;
+    background: url('img/menu.png') no-repeat;
+    background-size: 100%;
+    filter: invert();
+}
+
+.prev,
+.next {
+    width: 24px;
+    height: 24px;
+    opacity: .8;
+}
+
+.prev {
+    background: url('img/prev.png') no-repeat;
+    background-size: 100%;
+}
+
+.next {
+    background: url('img/next.png') no-repeat;
+    background-size: 100%;
+}
+
+img {
+    display: block;
+    max-width: 512px;
+    margin: 0 auto;
+}
+
+header,
+footer {
+    height: 50px;
+    padding: 0 1em;
+    background: #43853d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #eee;
+}
+
+.logo {
+    font-size: 1.4em;
+}
+
+.buttons {
+    width: 100%;
+    text-align: center;
+    margin: 1em 0;
+}
+
+main {
+    margin: 0 1em;
+    text-align: justify;
+    text-indent: 1em;
+    letter-spacing: .75px;
+    line-height: 1.4em;
+}
+
+main a {
+    text-decoration: none;
+    border-bottom: 1px dashed;
+}
+
+footer {
+    font-size: .95em;
+}
+
+footer a {
+    text-decoration: none;
+    color: #eee;
+}
+
+main p,
+main li {
+    margin: .5em 0;
+}
+
+main li {
+    list-style: circle;
+}
+
+h3 {
+    font-size: 1.4em;
+    margin-bottom: .5em;
+}
+
+h5 {
+    font-size: 1.2em;
+    margin-bottom: .5em;
+}
+
+h6 {
+    font-size: 1.1em;
+}
+
+code {
+    display: block;
+    white-space: pre-wrap;
+    background: #eee;
+    padding: 0 2em 1.5em;
+    margin: .5em 0;
+    border-radius: 4px;
+    font-size: .95em;
+}
+
+@media (max-width: 666px) {
+    * {
+        font-size: .95em;
+    }
+
+    nav {
+        width: 250px;
+    }
+
+    .menu {
+        width: 24px;
+        height: 24px;
+    }
+
+    .prev,
+    .next {
+        width: 18px;
+        height: 18px;
+    }
+}
