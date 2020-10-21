@@ -1,7 +1,7 @@
 {
   "name": "Руководство по Node.js",
   "short_name": "NG",
-  "start_url": "/",
+  "start_url": "./index.html",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#eee",
