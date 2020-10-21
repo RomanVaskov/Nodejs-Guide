@@ -1,254 +1,328 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
+  <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1JSDT7L4E"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-K1JSDT7L4E"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-K1JSDT7L4E');
+      gtag("config", "G-K1JSDT7L4E");
     </script>
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
-        (function (m, e, t, r, i, k, a) {
-            m[i] = m[i] || function () {
-                (m[i].a = m[i].a || []).push(arguments)
-            };
-            m[i].l = 1 * new Date();
-            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode
-                .insertBefore(k, a)
-        })
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
 
-        ym(66461323, "init", {
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true
-        });
+      ym(66461323, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+      });
     </script>
     <noscript>
-        <div><img src="https://mc.yandex.ru/watch/66461323" style="position:absolute; left:-9999px;" alt="" /></div>
+      <div>
+        <img
+          src="https://mc.yandex.ru/watch/66461323"
+          style="position: absolute; left: -9999px"
+          alt=""
+        />
+      </div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Руководство по Node.js</title>
 
-    <meta name="author" content="Igor Agapov">
-    <meta name="description" content="Краткое руководство по Node.js для начинающих">
-    <meta name="theme-color" content="#eee">
+    <meta name="author" content="Igor Agapov" />
+    <meta
+      name="description"
+      content="Краткое руководство по Node.js для начинающих"
+    />
+    <meta name="theme-color" content="#eee" />
 
     <!-- facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://harryheman.github.io/JSQ/index.html">
-    <meta property="og:title" content="Руководство по Node.js">
-    <meta property="og:image" content="./icons/256.png">
-    <meta property="og:description" content="Краткое руководство по Node.js для начинающих">
-    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://harryheman.github.io/JSQ/index.html"
+    />
+    <meta property="og:title" content="Руководство по Node.js" />
+    <meta property="og:image" content="./icons/256.png" />
+    <meta
+      property="og:description"
+      content="Краткое руководство по Node.js для начинающих"
+    />
+    <meta property="og:locale" content="ru_RU" />
 
     <!-- twitter -->
-    <meta name="twitter:title" content="Руководство по Node.js">
-    <meta name="twitter:description" content="Краткое руководство по Node.js для начинающих">
-    <meta name="twitter:image" content="./icons/128.png">
+    <meta name="twitter:title" content="Руководство по Node.js" />
+    <meta
+      name="twitter:description"
+      content="Краткое руководство по Node.js для начинающих"
+    />
+    <meta name="twitter:image" content="./icons/128.png" />
 
     <!-- apple -->
-    <meta name="apple-mobile-web-app-title" content="Руководство по Node.js">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#222">
-    <link rel="apple-touch-icon" href="./icons/256.png">
+    <meta name="apple-mobile-web-app-title" content="Руководство по Node.js" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#222" />
+    <link rel="apple-touch-icon" href="./icons/256.png" />
 
-    <meta itemprop="name" content="Руководство по Node.js">
-    <meta itemprop="description" content="Краткое руководство по Node.js для начинающих">
-    <meta itemprop="image" content="./icons/128.png">
+    <meta itemprop="name" content="Руководство по Node.js" />
+    <meta
+      itemprop="description"
+      content="Краткое руководство по Node.js для начинающих"
+    />
+    <meta itemprop="image" content="./icons/128.png" />
 
-    <link rel="icon" href="./icons/64.png">
+    <link rel="icon" href="./icons/64.png" />
 
-    <link rel="manifest" href="./manifest.json">
+    <link rel="manifest" href="./manifest.json" />
 
-    <link rel="stylesheet" href="./style.css">
-</head>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li>
-                    <a class="link" data-url="1" href="#">1. Введение</a>
-                </li>
-                <li>
-                    <a class="link" data-url="2" href="#">2. Краткая история</a>
-                </li>
-                <li>
-                    <a class="link" data-url="3" href="#">3. Установка</a>
-                </li>
-                <li>
-                    <a class="link" data-url="4" href="#">4. Необходимый уровень владения JavaScript</a>
-                </li>
-                <li>
-                    <a class="link" data-url="5" href="#">5. Разница между Node.js и браузером</a>
-                </li>
-                <li>
-                    <a class="link" data-url="6" href="#">6. Движок V8</a>
-                </li>
-                <li>
-                    <a class="link" data-url="7" href="#">7. Запуск скриптов из командной строки</a>
-                </li>
-                <li>
-                    <a class="link" data-url="8" href="#">8. Выход (завершение работы)</a>
-                </li>
-                <li>
-                    <a class="link" data-url="9" href="#">9. REPL</a>
-                </li>
-                <li>
-                    <a class="link" data-url="10" href="#">10. Передача аргументов из командной строки</a>
-                </li>
-                <li>
-                    <a class="link" data-url="11" href="#">11. Вывод результатов в командную строку</a>
-                </li>
-                <li>
-                    <a class="link" data-url="12" href="#">12. Получение данных, введенных пользователем</a>
-                </li>
-                <li>
-                    <a class="link" data-url="13" href="#">13. Расширение функциональности с помощью экспорта</a>
-                </li>
-                <li>
-                    <a class="link" data-url="14" href="#">14. Пакетный менеджер</a>
-                </li>
-                <li>
-                    <a class="link" data-url="15" href="#">15. Установка пакетов</a>
-                </li>
-                <li>
-                    <a class="link" data-url="16" href="#">16. Использование пакетов</a>
-                </li>
-                <li>
-                    <a class="link" data-url="17" href="#">17. Package.json</a>
-                </li>
-                <li>
-                    <a class="link" data-url="18" href="#">18. Package-lock.json</a>
-                </li>
-                <li>
-                    <a class="link" data-url="19" href="#">19. Поиск версии установленного пакета</a>
-                </li>
-                <li>
-                    <a class="link" data-url="20" href="#">20. Установка старой версии пакета</a>
-                </li>
-                <li>
-                    <a class="link" data-url="21" href="#">21. Обновление зависимостей</a>
-                </li>
-                <li>
-                    <a class="link" data-url="22" href="#">22. Семантическое версионирование</a>
-                </li>
-                <li>
-                    <a class="link" data-url="23" href="#">23. Удаление пакета</a>
-                </li>
-                <li>
-                    <a class="link" data-url="24" href="#">24. Глобальные и локальные пакеты</a>
-                </li>
-                <li>
-                    <a class="link" data-url="25" href="#">25. dependencies и devDependencies</a>
-                </li>
-                <li>
-                    <a class="link" data-url="26" href="#">26. Запуск пакета с помощью npx</a>
-                </li>
-                <li>
-                    <a class="link" data-url="27" href="#">27. Цикл событий</a>
-                </li>
-                <li>
-                    <a class="link" data-url="28" href="#">28. Process.nextTick()</a>
-                </li>
-                <li>
-                    <a class="link" data-url="29" href="#">29. SetImmediate()</a>
-                </li>
-                <li>
-                    <a class="link" data-url="30" href="#">30. Таймеры (счетчики)</a>
-                </li>
-                <li>
-                    <a class="link" data-url="31" href="#">31. Асинхронность и функции обратного вызова</a>
-                </li>
-                <li>
-                    <a class="link" data-url="32" href="#">32. Промисы</a>
-                </li>
-                <li>
-                    <a class="link" data-url="33" href="#">33. Async/Await</a>
-                </li>
-                <li>
-                    <a class="link" data-url="34" href="#">34. Event Emitter (обработчик событий)</a>
-                </li>
-                <li>
-                    <a class="link" data-url="35" href="#">35. Создание HTTP-сервера</a>
-                </li>
-                <li>
-                    <a class="link" data-url="36" href="#">36. Отправка HTTP-запросов</a>
-                </li>
-                <li>
-                    <a class="link" data-url="37" href="#">37. Отправка POST-запроса</a>
-                </li>
-                <li>
-                    <a class="link" data-url="38" href="#">38. Получение данных из тела запроса</a>
-                </li>
-                <li>
-                    <a class="link" data-url="39" href="#">39. Файловый дескриптор</a>
-                </li>
-                <li>
-                    <a class="link" data-url="40" href="#">40. Статистика файла</a>
-                </li>
-                <li>
-                    <a class="link" data-url="41" href="#">41. Путь к файлу</a>
-                </li>
-                <li>
-                    <a class="link" data-url="42" href="#">42. Чтение файла</a>
-                </li>
-                <li>
-                    <a class="link" data-url="43" href="#">43. Запись файла</a>
-                </li>
-                <li>
-                    <a class="link" data-url="44" href="#">44. Работа с директориями</a>
-                </li>
-                <li>
-                    <a class="link" data-url="45" href="#">45. Модуль fs</a>
-                </li>
-                <li>
-                    <a class="link" data-url="46" href="#">46. Модуль path</a>
-                </li>
-                <li>
-                    <a class="link" data-url="47" href="#">47. Модуль os</a>
-                </li>
-                <li>
-                    <a class="link" data-url="48" href="#">48. Модуль events</a>
-                </li>
-                <li>
-                    <a class="link" data-url="49" href="#">49. Модуль http</a>
-                </li>
-                <li>
-                    <a class="link" data-url="50" href="#">50. Буфер</a>
-                </li>
-                <li>
-                    <a class="link" data-url="51" href="#">51. Поток</a>
-                </li>
-                <li>
-                    <a class="link" data-url="52" href="#">52. Разница между средой для разработки и средой для
-                        продакшна</a>
-                </li>
-                <li>
-                    <a class="link" data-url="53" href="#">53. Обработка ошибок</a>
-                </li>
-                <li>
-                    <a class="link" data-url="54" href="#">54. Отображение объекта в консоли</a>
-                </li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li>
+            <a class="link" data-url="1" href="#">1. Введение</a>
+          </li>
+          <li>
+            <a class="link" data-url="2" href="#">2. Краткая история</a>
+          </li>
+          <li>
+            <a class="link" data-url="3" href="#">3. Установка</a>
+          </li>
+          <li>
+            <a class="link" data-url="4" href="#"
+              >4. Необходимый уровень владения JavaScript</a
+            >
+          </li>
+          <li>
+            <a class="link" data-url="5" href="#"
+              >5. Разница между Node.js и браузером</a
+            >
+          </li>
+          <li>
+            <a class="link" data-url="6" href="#">6. Движок V8</a>
+          </li>
+          <li>
+            <a class="link" data-url="7" href="#"
+              >7. Запуск скриптов из командной строки</a
+            >
+          </li>
+          <li>
+            <a class="link" data-url="8" href="#"
+              >8. Выход (завершение работы)</a
+            >
+          </li>
+          <li>
+            <a class="link" data-url="9" href="#">9. REPL</a>
+          </li>
+          <li>
+            <a class="link" data-url="10" href="#"
+              >10. Передача аргументов из командной строки</a
+            >
+          </li>
+          <li>
+            <a class="link" data-url="11" href="#"
+              >11. Вывод результатов в командную строку</a
+            >
+          </li>
+          <li>
+            <a class="link" data-url="12" href="#"
+              >12. Получение данных, введенных пользователем</a
+            >
+          </li>
+          <li>
+            <a class="link" data-url="13" href="#"
+              >13. Расширение функциональности с помощью экспорта</a
+            >
+          </li>
+          <li>
+            <a class="link" data-url="14" href="#">14. Пакетный менеджер</a>
+          </li>
+          <li>
+            <a class="link" data-url="15" href="#">15. Установка пакетов</a>
+          </li>
+          <li>
+            <a class="link" data-url="16" href="#">16. Использование пакетов</a>
+          </li>
+          <li>
+            <a class="link" data-url="17" href="#">17. Package.json</a>
+          </li>
+          <li>
+            <a class="link" data-url="18" href="#">18. Package-lock.json</a>
+          </li>
+          <li>
+            <a class="link" data-url="19" href="#"
+              >19. Поиск версии установленного пакета</a
+            >
+          </li>
+          <li>
+            <a class="link" data-url="20" href="#"
+              >20. Установка старой версии пакета</a
+            >
+          </li>
+          <li>
+            <a class="link" data-url="21" href="#"
+              >21. Обновление зависимостей</a
+            >
+          </li>
+          <li>
+            <a class="link" data-url="22" href="#"
+              >22. Семантическое версионирование</a
+            >
+          </li>
+          <li>
+            <a class="link" data-url="23" href="#">23. Удаление пакета</a>
+          </li>
+          <li>
+            <a class="link" data-url="24" href="#"
+              >24. Глобальные и локальные пакеты</a
+            >
+          </li>
+          <li>
+            <a class="link" data-url="25" href="#"
+              >25. dependencies и devDependencies</a
+            >
+          </li>
+          <li>
+            <a class="link" data-url="26" href="#"
+              >26. Запуск пакета с помощью npx</a
+            >
+          </li>
+          <li>
+            <a class="link" data-url="27" href="#">27. Цикл событий</a>
+          </li>
+          <li>
+            <a class="link" data-url="28" href="#">28. Process.nextTick()</a>
+          </li>
+          <li>
+            <a class="link" data-url="29" href="#">29. SetImmediate()</a>
+          </li>
+          <li>
+            <a class="link" data-url="30" href="#">30. Таймеры (счетчики)</a>
+          </li>
+          <li>
+            <a class="link" data-url="31" href="#"
+              >31. Асинхронность и функции обратного вызова</a
+            >
+          </li>
+          <li>
+            <a class="link" data-url="32" href="#">32. Промисы</a>
+          </li>
+          <li>
+            <a class="link" data-url="33" href="#">33. Async/Await</a>
+          </li>
+          <li>
+            <a class="link" data-url="34" href="#"
+              >34. Event Emitter (обработчик событий)</a
+            >
+          </li>
+          <li>
+            <a class="link" data-url="35" href="#">35. Создание HTTP-сервера</a>
+          </li>
+          <li>
+            <a class="link" data-url="36" href="#"
+              >36. Отправка HTTP-запросов</a
+            >
+          </li>
+          <li>
+            <a class="link" data-url="37" href="#">37. Отправка POST-запроса</a>
+          </li>
+          <li>
+            <a class="link" data-url="38" href="#"
+              >38. Получение данных из тела запроса</a
+            >
+          </li>
+          <li>
+            <a class="link" data-url="39" href="#">39. Файловый дескриптор</a>
+          </li>
+          <li>
+            <a class="link" data-url="40" href="#">40. Статистика файла</a>
+          </li>
+          <li>
+            <a class="link" data-url="41" href="#">41. Путь к файлу</a>
+          </li>
+          <li>
+            <a class="link" data-url="42" href="#">42. Чтение файла</a>
+          </li>
+          <li>
+            <a class="link" data-url="43" href="#">43. Запись файла</a>
+          </li>
+          <li>
+            <a class="link" data-url="44" href="#">44. Работа с директориями</a>
+          </li>
+          <li>
+            <a class="link" data-url="45" href="#">45. Модуль fs</a>
+          </li>
+          <li>
+            <a class="link" data-url="46" href="#">46. Модуль path</a>
+          </li>
+          <li>
+            <a class="link" data-url="47" href="#">47. Модуль os</a>
+          </li>
+          <li>
+            <a class="link" data-url="48" href="#">48. Модуль events</a>
+          </li>
+          <li>
+            <a class="link" data-url="49" href="#">49. Модуль http</a>
+          </li>
+          <li>
+            <a class="link" data-url="50" href="#">50. Буфер</a>
+          </li>
+          <li>
+            <a class="link" data-url="51" href="#">51. Поток</a>
+          </li>
+          <li>
+            <a class="link" data-url="52" href="#"
+              >52. Разница между средой для разработки и средой для продакшна</a
+            >
+          </li>
+          <li>
+            <a class="link" data-url="53" href="#">53. Обработка ошибок</a>
+          </li>
+          <li>
+            <a class="link" data-url="54" href="#"
+              >54. Отображение объекта в консоли</a
+            >
+          </li>
+        </ul>
+      </nav>
 
-        <button class="menu"></button>
+      <button class="menu">Оглавление</button>
 
-        <p class="logo">Node.js</p>
+      <p class="logo"><a href="https://nodejs.org/en/">Node.js</a></p>
     </header>
 
     <div class="darken"></div>
@@ -256,16 +330,15 @@
     <main></main>
 
     <div class="buttons">
-        <button class="prev"></button>
-        <button class="next"></button>
+      <button class="prev">Назад</button>
+      <button class="next">Вперед</button>
     </div>
 
     <footer>
-        <a href="https://nodejs.dev/learn">Оригинал на английском языке</a>
-        <p>&copy; 2020. Игорь Агапов</p>
+      <a href="https://nodejs.dev/learn">Оригинал на английском языке</a>
+      <p>&copy; 2020. Игорь Агапов</p>
     </footer>
 
     <script src="./script.js" type="module"></script>
-</body>
-
+  </body>
 </html>
