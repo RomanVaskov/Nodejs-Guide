@@ -1,35 +1,37 @@
 {
-    "name": "Руководство по Node.js",
-    "short_name": "NG",
-    "start_url": "./",
-    "display": "standalone",
-    "orientation": "portrait",
-    "background_color": "#eee",
-    "theme_color": "#222",
-    "description": "Краткое руководство по Node.js для начинающих",
-    "categories": "education",
-    "icons": [{
-        "src": "./icons/64.png",
-        "sizes": "64x64",
-        "type": "image/png"
-      },
-      {
-        "src": "./icons/128.png",
-        "sizes": "128x128",
-        "type": "image/png"
-      },
-      {
-        "src": "./icons/256.png",
-        "sizes": "256x256",
-        "type": "image/png",
-        "purpose": "any maskable"
-      },
-      {
-        "src": "./icons/512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-    }],
-    "serviceworker": {
-      "src": "./sw.js"
+  "name": "Руководство по Node.js",
+  "short_name": "NG",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#eee",
+  "theme_color": "#222",
+  "description": "Краткое руководство по Node.js для начинающих",
+  "categories": "education",
+  "icons": [
+    {
+      "src": "./icons/64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
+  ],
+  "serviceworker": {
+    "src": "./sw.js"
   }
+}
