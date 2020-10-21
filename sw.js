@@ -1,4 +1,4 @@
-const NAME = "nodejs-guide-v3",
+const NAME = "nodejs-guide-v4",
   FILES = [
     "./index.html",
     "./style.css",
@@ -83,39 +83,39 @@ const NAME = "nodejs-guide-v3",
     "./chapters/54.js",
   ];
 
-self.addEventListener("install", (ev) => {
-  ev.waitUntil(
-    caches
-      .open(NAME)
-      .then((cache) => cache.addAll(FILES))
-      .catch((er) => console.log(er))
-  ),
-    self.skipWaiting();
+self.addEventListener("install", (e) => {
+  e.waitUntil(caches.open(NAME).then((cache) => cache.addAll(FILES)));
+  self.skipWaiting();
 });
-self.addEventListener("activate", (ev) => {
-  ev.waitUntil(
-    caches.keys().then((keyList) =>
+
+self.addEventListener("activate", (e) => {
+  e.waitUntil(
+    caches.keys().then((keys) =>
       Promise.all(
-        keyList.map((key) => {
-          if (key !== NAME) return caches.delete(key);
+        keys.map((key) => {
+          if (key !== NAME) {
+            return caches.delete(key);
+          }
         })
       )
     )
-  ),
-    self.clients.claim();
+  );
+  self.clients.claim();
 });
-self.addEventListener("fetch", (ev) => {
-  ev.respondWith(
-    fetch(ev.request)
-      .then((res) => {
-        let cacheClone = res.clone();
-        return (
-          caches.open(NAME).then((cache) => {
-            cache.put(ev.request, cacheClone).catch((er) => console.log(er));
-          }),
-          res
-        );
-      })
-      .catch(() => caches.match(ev.request).then((res) => res))
+
+self.addEventListener("fetch", (e) => {
+  e.respondWith(
+    fetch(e.request)
+      .then(
+        (response) =>
+          response ||
+          fetch(e.request).then((response) =>
+            caches.open(NAME).then((cache) => {
+              cache.put(e.request, response.clone());
+              return response;
+            })
+          )
+      )
+      .catch(() => caches.match("./404.html"))
   );
 });
