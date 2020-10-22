@@ -144,7 +144,8 @@ header {
   font-size: 1.4em;
 }
 
-.logo a {
+.logo a,
+footer a {
   text-decoration: none;
   color: #eee;
 }
@@ -172,11 +173,6 @@ main a {
 
 footer {
   font-size: 0.96em;
-}
-
-footer a {
-  text-decoration: none;
-  color: #eee;
 }
 
 main p,
