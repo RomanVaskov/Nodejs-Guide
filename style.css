@@ -97,6 +97,13 @@ nav a {
   display: none;
 }
 
+.buttons {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
 button {
   border: none;
   outline: none;
@@ -140,6 +147,10 @@ header {
   margin-bottom: 1em;
 }
 
+footer {
+  font-size: 0.96em;
+}
+
 .logo {
   font-size: 1.4em;
 }
@@ -148,13 +159,6 @@ header {
 footer a {
   text-decoration: none;
   color: #eee;
-}
-
-.buttons {
-  width: 100%;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
 }
 
 main {
@@ -169,10 +173,6 @@ main {
 main a {
   text-decoration: none;
   border-bottom: 1px dashed;
-}
-
-footer {
-  font-size: 0.96em;
 }
 
 main p,
@@ -208,23 +208,27 @@ code {
   font-size: 0.95em;
 }
 
-@media (max-width: 666px) {
+@media (max-width: 660px) {
   * {
     font-size: 0.96em;
   }
 
-  footer {
-    font-size: 0.86em;
-  }
-
   nav {
     width: 250px;
+  }
+
+  footer {
+    font-size: 0.86em;
   }
 }
 
 @media (max-width: 370px) {
   * {
     font-size: 0.94em;
+  }
+
+  header {
+    font-size: 0.86em;
   }
 
   footer {
