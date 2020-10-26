@@ -115,6 +115,6 @@ self.addEventListener("fetch", (e) => {
             })
           )
       )
-      .catch(() => caches.match("./404.html"))
+      .catch(() => caches.match("./index.html"))
   );
 });
