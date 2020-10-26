@@ -1,10 +1,87 @@
 <!DOCTYPE html>
-<html lang="ru" dir="ltr" itemscope itemtype="" prefix="og: http://ogp.me/ns#">
+<html
+  lang="ru"
+  dir="ltr"
+  itemscope
+  itemtype="https://schema.org/WebPage"
+  prefix="og: http://ogp.me/ns#"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- security -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; font-src https://fonts.googleapis.com; object-src 'none'; frame-ancestors 'none'"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+
+    <meta name="author" content="Igor Agapov" />
+    <meta
+      name="description"
+      content="Краткое руководство по Node.js для начинающих"
+    />
+    <meta
+      name="keywords"
+      content="node.js, nodejs, node, guide, guideline, руководство, инструкция"
+    />
+
+    <meta itemprop="name" content="Руководство по Node.js" />
+    <meta
+      itemprop="description"
+      content="Краткое руководство по Node.js для начинающих"
+    />
+    <meta itemprop="image" content="./icons/128.png" />
+
+    <link rel="canonical" href="https://nodejs-guide.ru/" />
+
+    <!-- microsoft -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="cleartype" content="on" />
+    <meta name="application-name" content="Руководство по Node.js" />
+    <meta name="msapplication-tooltip" content="Руководство по Node.js" />
+    <meta name="msapplication-starturl" content="/" />
+    <meta name="msapplication-config" content="browserconfig.xml" />
+
+    <!-- facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nodejs-guide.ru/" />
+    <meta property="og:title" content="Руководство по Node.js" />
+    <meta property="og:image" content="./icons/256.png" />
+    <meta property="og:site_name" content="Руководство по Node.js" />
+    <meta
+      property="og:description"
+      content="Краткое руководство по Node.js для начинающих"
+    />
+    <meta property="og:locale" content="ru_RU" />
+
+    <!-- twitter -->
+    <meta name="twitter:title" content="Руководство по Node.js" />
+    <meta
+      name="twitter:description"
+      content="Краткое руководство по Node.js для начинающих"
+    />
+    <meta name="twitter:url" content="https://nodejs-guide.ru/" />
+    <meta name="twitter:image" content="./icons/128.png" />
+
+    <!-- ios -->
+    <meta name="apple-mobile-web-app-title" content="Руководство по Node.js" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#222" />
+    <link rel="apple-touch-icon" href="./icons/256.png" />
+
+    <!-- android -->
+    <meta name="theme-color" content="#eee" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
     <title>Руководство по Node.js</title>
+
+    <link rel="icon" type="image/png" href="./icons/64.png" />
+
+    <link rel="manifest" href="./manifest.json" />
 
     <meta
       name="google-site-verification"
@@ -72,55 +149,26 @@
     </noscript>
     <!-- /Yandex.Metrika counter -->
 
-    <meta name="author" content="Igor Agapov" />
-    <meta
-      name="description"
-      content="Краткое руководство по Node.js для начинающих"
-    />
-    <meta
-      name="keywords"
-      content="node.js, nodejs, node, руководство, инструкция"
-    />
-    <meta name="theme-color" content="#eee" />
-
-    <meta itemprop="name" content="Руководство по Node.js" />
-    <meta
-      itemprop="description"
-      content="Краткое руководство по Node.js для начинающих"
-    />
-    <meta itemprop="image" content="./icons/128.png" />
-
-    <!-- facebook -->
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://harryheman.github.io/JSQ/index.html"
-    />
-    <meta property="og:title" content="Руководство по Node.js" />
-    <meta property="og:image" content="./icons/256.png" />
-    <meta
-      property="og:description"
-      content="Краткое руководство по Node.js для начинающих"
-    />
-    <meta property="og:locale" content="ru_RU" />
-
-    <!-- twitter -->
-    <meta name="twitter:title" content="Руководство по Node.js" />
-    <meta
-      name="twitter:description"
-      content="Краткое руководство по Node.js для начинающих"
-    />
-    <meta name="twitter:image" content="./icons/128.png" />
-
-    <!-- apple -->
-    <meta name="apple-mobile-web-app-title" content="Руководство по Node.js" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="#222" />
-    <link rel="apple-touch-icon" href="./icons/256.png" />
-
-    <link rel="icon" href="./icons/64.png" />
-
-    <link rel="manifest" href="./manifest.json" />
+    <!-- json-ld -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "@type": "Course",
+        "name": "Руководство по Node.js",
+        "image": ["https://nodejs-guide.ru/icons/512.png"],
+        "provider": {
+          "@type": "Person",
+          "name": "Igor Agapov"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Igor Agapov"
+        },
+        "datePublished": "2020-26-10",
+        "description": "Краткое руководство по Node.js для начинающих.",
+        "keywords": "node.js, nodejs, node, guide, guideline, руководство, инструкция"
+      }
+    </script>
 
     <link rel="stylesheet" href="./style.css" />
   </head>
@@ -338,7 +386,11 @@
 
       <button class="menu">Оглавление</button>
 
-      <p class="logo"><a href="https://nodejs.org/en/">Node.js</a></p>
+      <p class="logo">
+        <a href="https://nodejs.org/en/" target="_blank" rel="noopener"
+          >Node.js</a
+        >
+      </p>
     </header>
 
     <div class="darken"></div>
@@ -354,7 +406,12 @@
       <a href="https://nodejs.dev/learn">Оригинал на английском языке</a>
       <p>
         &copy; 2020.
-        <a href="https://github.com/harryheman/Nodejs-Guide">Игорь Агапов</a>
+        <a
+          href="https://github.com/harryheman/Nodejs-Guide"
+          target="_blank"
+          rel="noopener"
+          >Игорь Агапов</a
+        >
       </p>
     </footer>
 
