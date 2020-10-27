@@ -18,7 +18,7 @@ darken.addEventListener("click", () => {
   B.style.overflow = "auto";
 });
 
-let i = +localStorage.getItem("NodejsGuidePageNumber") || 1;
+let i = +localStorage.getItem("NodejsGuidePageNumber");
 
 const showPage = async (i) => {
   const url = `./chapters/${i}.js`;
@@ -34,7 +34,9 @@ const showPage = async (i) => {
   hljs(window);
 };
 
-showPage(i);
+if (i) {
+  showPage(i);
+}
 
 const changePage = (ev) => {
   if (ev === "-") {
@@ -53,10 +55,7 @@ B.addEventListener("click", (ev) => {
     i = +ev.target.dataset.url;
     showPage(i);
     darken.click();
-  } else if (
-    ev.target.tagName === "LI" &&
-    ev.target.parentElement.parentElement === nav
-  ) {
+  } else if (ev.target.tagName === "LI" && ev.target.parentElement.parentElement === nav) {
     i = +ev.target.children[0].dataset.url;
     showPage(i);
     darken.click();
