@@ -1,12 +1,8 @@
 import { hljs } from "./hl.js";
 
 const B = document.body;
-const menuBtn = B.querySelector(".menu");
-const nav = B.querySelector("nav");
-const darken = B.querySelector(".darken");
-const main = B.querySelector("main");
 
-menuBtn.addEventListener("click", () => {
+menu.addEventListener("click", () => {
   nav.className = "show";
   darken.style.display = "block";
   B.style.overflow = "hidden";
@@ -63,7 +59,7 @@ B.addEventListener("click", (ev) => {
     changePage("-");
   } else if (ev.target.className === "next") {
     changePage("+");
-  } else return;
+  }
 });
 
 document.addEventListener("keydown", (ev) => {
@@ -71,7 +67,7 @@ document.addEventListener("keydown", (ev) => {
     changePage("-");
   } else if (ev.keyCode === 39 || ev.keyCode === 68 || ev.keyCode === 102) {
     changePage("+");
-  } else return;
+  }
 });
 
 navigator.serviceWorker.register("./sw.js").catch((er) => console.error(er));
