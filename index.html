@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Руководство по Node.js</title>
+
+    <meta name="referrer" content="origin" />
+    <link rel="canonical" href="https://nodejs-guide.ru/" />
+    <link rel="icon" type="image/png" href="./icons/64.png" />
+    <link rel="manifest" href="./manifest.json" />
 
     <!-- security -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
@@ -15,9 +21,6 @@
     <meta itemprop="name" content="Руководство по Node.js" />
     <meta itemprop="description" content="Краткое руководство по Node.js для начинающих" />
     <meta itemprop="image" content="./icons/128.png" />
-
-    <meta name="referrer" content="origin" />
-    <link rel="canonical" href="https://nodejs-guide.ru/" />
 
     <!-- microsoft -->
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -51,12 +54,6 @@
     <!-- android -->
     <meta name="theme-color" content="#eee" />
     <meta name="mobile-web-app-capable" content="yes" />
-
-    <title>Руководство по Node.js</title>
-
-    <link rel="icon" type="image/png" href="./icons/64.png" />
-
-    <link rel="manifest" href="./manifest.json" />
 
     <meta name="google-site-verification" content="Ccf24cxCGtfjisuo6dq4P01l0xlwBPmqyCv4DqvBonA" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -121,6 +118,7 @@
       }
     </script>
 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="preload" as="font" />
     <link rel="stylesheet" href="./style.min.css" />
   </head>
 
@@ -129,166 +127,166 @@
       <nav id="nav">
         <ul>
           <li>
-            <a class="link" data-url="1" href="#">1. Введение</a>
+            <a class="link" data-url="1">1. Введение</a>
           </li>
           <li>
-            <a class="link" data-url="2" href="#">2. Краткая история</a>
+            <a class="link" data-url="2">2. Краткая история</a>
           </li>
           <li>
-            <a class="link" data-url="3" href="#">3. Установка</a>
+            <a class="link" data-url="3">3. Установка</a>
           </li>
           <li>
-            <a class="link" data-url="4" href="#">4. Необходимый уровень владения JavaScript</a>
+            <a class="link" data-url="4">4. Необходимый уровень владения JavaScript</a>
           </li>
           <li>
-            <a class="link" data-url="5" href="#">5. Разница между Node.js и браузером</a>
+            <a class="link" data-url="5">5. Разница между Node.js и браузером</a>
           </li>
           <li>
-            <a class="link" data-url="6" href="#">6. Движок V8</a>
+            <a class="link" data-url="6">6. Движок V8</a>
           </li>
           <li>
-            <a class="link" data-url="7" href="#">7. Запуск скриптов из командной строки</a>
+            <a class="link" data-url="7">7. Запуск скриптов из командной строки</a>
           </li>
           <li>
-            <a class="link" data-url="8" href="#">8. Выход (завершение работы)</a>
+            <a class="link" data-url="8">8. Выход (завершение работы)</a>
           </li>
           <li>
-            <a class="link" data-url="9" href="#">9. REPL</a>
+            <a class="link" data-url="9">9. REPL</a>
           </li>
           <li>
-            <a class="link" data-url="10" href="#">10. Передача аргументов из командной строки</a>
+            <a class="link" data-url="10">10. Передача аргументов из командной строки</a>
           </li>
           <li>
-            <a class="link" data-url="11" href="#">11. Вывод результатов в командную строку</a>
+            <a class="link" data-url="11">11. Вывод результатов в командную строку</a>
           </li>
           <li>
-            <a class="link" data-url="12" href="#">12. Получение данных, введенных пользователем</a>
+            <a class="link" data-url="12">12. Получение данных, введенных пользователем</a>
           </li>
           <li>
-            <a class="link" data-url="13" href="#">13. Расширение функциональности с помощью экспорта</a>
+            <a class="link" data-url="13">13. Расширение функциональности с помощью экспорта</a>
           </li>
           <li>
-            <a class="link" data-url="14" href="#">14. Пакетный менеджер</a>
+            <a class="link" data-url="14">14. Пакетный менеджер</a>
           </li>
           <li>
-            <a class="link" data-url="15" href="#">15. Установка пакетов</a>
+            <a class="link" data-url="15">15. Установка пакетов</a>
           </li>
           <li>
-            <a class="link" data-url="16" href="#">16. Использование пакетов</a>
+            <a class="link" data-url="16">16. Использование пакетов</a>
           </li>
           <li>
-            <a class="link" data-url="17" href="#">17. Package.json</a>
+            <a class="link" data-url="17">17. Package.json</a>
           </li>
           <li>
-            <a class="link" data-url="18" href="#">18. Package-lock.json</a>
+            <a class="link" data-url="18">18. Package-lock.json</a>
           </li>
           <li>
-            <a class="link" data-url="19" href="#">19. Поиск версии установленного пакета</a>
+            <a class="link" data-url="19">19. Поиск версии установленного пакета</a>
           </li>
           <li>
-            <a class="link" data-url="20" href="#">20. Установка старой версии пакета</a>
+            <a class="link" data-url="20">20. Установка старой версии пакета</a>
           </li>
           <li>
-            <a class="link" data-url="21" href="#">21. Обновление зависимостей</a>
+            <a class="link" data-url="21">21. Обновление зависимостей</a>
           </li>
           <li>
-            <a class="link" data-url="22" href="#">22. Семантическое версионирование</a>
+            <a class="link" data-url="22">22. Семантическое версионирование</a>
           </li>
           <li>
-            <a class="link" data-url="23" href="#">23. Удаление пакета</a>
+            <a class="link" data-url="23">23. Удаление пакета</a>
           </li>
           <li>
-            <a class="link" data-url="24" href="#">24. Глобальные и локальные пакеты</a>
+            <a class="link" data-url="24">24. Глобальные и локальные пакеты</a>
           </li>
           <li>
-            <a class="link" data-url="25" href="#">25. dependencies и devDependencies</a>
+            <a class="link" data-url="25">25. dependencies и devDependencies</a>
           </li>
           <li>
-            <a class="link" data-url="26" href="#">26. Запуск пакета с помощью npx</a>
+            <a class="link" data-url="26">26. Запуск пакета с помощью npx</a>
           </li>
           <li>
-            <a class="link" data-url="27" href="#">27. Цикл событий</a>
+            <a class="link" data-url="27">27. Цикл событий</a>
           </li>
           <li>
-            <a class="link" data-url="28" href="#">28. Process.nextTick()</a>
+            <a class="link" data-url="28">28. Process.nextTick()</a>
           </li>
           <li>
-            <a class="link" data-url="29" href="#">29. SetImmediate()</a>
+            <a class="link" data-url="29">29. SetImmediate()</a>
           </li>
           <li>
-            <a class="link" data-url="30" href="#">30. Таймеры (счетчики)</a>
+            <a class="link" data-url="30">30. Таймеры (счетчики)</a>
           </li>
           <li>
-            <a class="link" data-url="31" href="#">31. Асинхронность и функции обратного вызова</a>
+            <a class="link" data-url="31">31. Асинхронность и функции обратного вызова</a>
           </li>
           <li>
-            <a class="link" data-url="32" href="#">32. Промисы</a>
+            <a class="link" data-url="32">32. Промисы</a>
           </li>
           <li>
-            <a class="link" data-url="33" href="#">33. Async/Await</a>
+            <a class="link" data-url="33">33. Async/Await</a>
           </li>
           <li>
-            <a class="link" data-url="34" href="#">34. Event Emitter (обработчик событий)</a>
+            <a class="link" data-url="34">34. Event Emitter (обработчик событий)</a>
           </li>
           <li>
-            <a class="link" data-url="35" href="#">35. Создание HTTP-сервера</a>
+            <a class="link" data-url="35">35. Создание HTTP-сервера</a>
           </li>
           <li>
-            <a class="link" data-url="36" href="#">36. Отправка HTTP-запросов</a>
+            <a class="link" data-url="36">36. Отправка HTTP-запросов</a>
           </li>
           <li>
-            <a class="link" data-url="37" href="#">37. Отправка POST-запроса</a>
+            <a class="link" data-url="37">37. Отправка POST-запроса</a>
           </li>
           <li>
-            <a class="link" data-url="38" href="#">38. Получение данных из тела запроса</a>
+            <a class="link" data-url="38">38. Получение данных из тела запроса</a>
           </li>
           <li>
-            <a class="link" data-url="39" href="#">39. Файловый дескриптор</a>
+            <a class="link" data-url="39">39. Файловый дескриптор</a>
           </li>
           <li>
-            <a class="link" data-url="40" href="#">40. Статистика файла</a>
+            <a class="link" data-url="40">40. Статистика файла</a>
           </li>
           <li>
-            <a class="link" data-url="41" href="#">41. Путь к файлу</a>
+            <a class="link" data-url="41">41. Путь к файлу</a>
           </li>
           <li>
-            <a class="link" data-url="42" href="#">42. Чтение файла</a>
+            <a class="link" data-url="42">42. Чтение файла</a>
           </li>
           <li>
-            <a class="link" data-url="43" href="#">43. Запись файла</a>
+            <a class="link" data-url="43">43. Запись файла</a>
           </li>
           <li>
-            <a class="link" data-url="44" href="#">44. Работа с директориями</a>
+            <a class="link" data-url="44">44. Работа с директориями</a>
           </li>
           <li>
-            <a class="link" data-url="45" href="#">45. Модуль fs</a>
+            <a class="link" data-url="45">45. Модуль fs</a>
           </li>
           <li>
-            <a class="link" data-url="46" href="#">46. Модуль path</a>
+            <a class="link" data-url="46">46. Модуль path</a>
           </li>
           <li>
-            <a class="link" data-url="47" href="#">47. Модуль os</a>
+            <a class="link" data-url="47">47. Модуль os</a>
           </li>
           <li>
-            <a class="link" data-url="48" href="#">48. Модуль events</a>
+            <a class="link" data-url="48">48. Модуль events</a>
           </li>
           <li>
-            <a class="link" data-url="49" href="#">49. Модуль http</a>
+            <a class="link" data-url="49">49. Модуль http</a>
           </li>
           <li>
-            <a class="link" data-url="50" href="#">50. Буфер</a>
+            <a class="link" data-url="50">50. Буфер</a>
           </li>
           <li>
-            <a class="link" data-url="51" href="#">51. Поток</a>
+            <a class="link" data-url="51">51. Поток</a>
           </li>
           <li>
-            <a class="link" data-url="52" href="#">52. Разница между средой для разработки и средой для продакшна</a>
+            <a class="link" data-url="52">52. Разница между средой для разработки и средой для продакшна</a>
           </li>
           <li>
-            <a class="link" data-url="53" href="#">53. Обработка ошибок</a>
+            <a class="link" data-url="53">53. Обработка ошибок</a>
           </li>
           <li>
-            <a class="link" data-url="54" href="#">54. Отображение объекта в консоли</a>
+            <a class="link" data-url="54">54. Отображение объекта в консоли</a>
           </li>
         </ul>
       </nav>

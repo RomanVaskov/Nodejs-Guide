@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);
-
 * {
   font-family: "Montserrat", sans-serif;
   font-size: 1em;
@@ -19,8 +17,7 @@ nav {
   top: 0;
   left: -320px;
   width: 300px;
-  max-height: 100vh;
-  overflow: scroll;
+  overflow: hidden;
   background: #fff;
   padding: 1em;
   scrollbar-width: none;
