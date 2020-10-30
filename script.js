@@ -54,9 +54,9 @@ import { hljs } from "./hl.js";
       i = +ev.target.children[0].dataset.url;
       showPage(i);
       darken.click();
-    } else if (ev.target.className == "prev") {
+    } else if (ev.target === prev) {
       changePage("-");
-    } else if (ev.target.className === "next") {
+    } else if (ev.target === next) {
       changePage("+");
     }
   });
