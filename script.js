@@ -13,7 +13,7 @@ import { hljs } from "./hl.js";
     B.style.overflow = "auto";
   });
 
-  let i = +localStorage.getItem("NodejsGuidePageNumber");
+  let i = +localStorage.getItem("NodejsGuidePageNumber") || 1;
 
   const showPage = async (i) => {
     const url = `./chapters/${i}.js`;
@@ -29,9 +29,7 @@ import { hljs } from "./hl.js";
     hljs(window);
   };
 
-  if (i) {
-    showPage(i);
-  }
+  showPage(i);
 
   const changePage = (ev) => {
     if (ev === "-") {
