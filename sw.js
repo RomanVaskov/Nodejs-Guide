@@ -1,9 +1,10 @@
-const NAME = "nodejs-guide-v5",
+const NAME = "nodejs-guide-v6",
   FILES = [
     "./index.html",
     "./style.min.css",
     "./script.min.js",
     "./hl.js",
+    "./index.js",
     "./icons/150.png",
     "./icons/64.png",
     "./icons/128.png",
