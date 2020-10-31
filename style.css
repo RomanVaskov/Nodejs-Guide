@@ -58,7 +58,7 @@ nav ul {
 }
 
 nav li {
-  margin: 0.5em 0;
+  margin: 0.5em;
   padding: 0.5em 1em;
   cursor: pointer;
 }
@@ -70,7 +70,7 @@ nav li:hover {
 
 nav li a {
   text-decoration: none;
-  font-size: 0.95em;
+  font-size: 0.96em;
   color: #222;
   transition: 0.2s;
 }
@@ -154,8 +154,7 @@ footer a {
 }
 
 main {
-  margin: 0 1em;
-  padding: 0 1em;
+  padding: 0 2em;
   text-align: justify;
   text-indent: 1em;
   letter-spacing: 0.75px;

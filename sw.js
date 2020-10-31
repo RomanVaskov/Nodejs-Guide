@@ -1,8 +1,8 @@
 const NAME = "nodejs-guide-v6",
   FILES = [
     "./index.html",
-    "./style.min.css",
-    "./script.min.js",
+    "./style.css",
+    "./script.js",
     "./hl.js",
     "./index.js",
     "./icons/150.png",
