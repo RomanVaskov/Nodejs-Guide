@@ -49,6 +49,8 @@ export default `
         bar()
         baz()
     }
+
+    foo()
 </code>
 
 <p>При запуске кода сначала вызывается <span>foo()</span>. В <span>foo()</span> сначала вызывается <span>bar()</span>, затем <span>baz()</span>.</p>
